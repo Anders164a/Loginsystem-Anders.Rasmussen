@@ -1,23 +1,26 @@
 <html>
   <head>
-    <title>Loginsystem</title>
+    <title>Registrer!</title>
   </head>
 
   <body>
 
     <h2>Lav en bruger!</h2>
     <br>
+
     <form action="Registrer2.php" method="post">
       Indtast Ønskede Brugernavn:
       <br>
       <input type="text" name="BrugernavnRegistrer"/>
-      <br>
-      <br>
+      <br><br>
       Indtast Ønskede Password:
       <br>
       <input type="password" name="PasswordRegistrer"/>
+      <br><br>
+      Indtast Email:
       <br>
-      <br>
+      <input type="text" name="EmailRegistrer"/>
+      <br><br>
       <button type="submit">Registrer</button>
     </form>
 

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title></title>
+    <title>Hjemmeside</title>
   </head>
 
   <body>
@@ -10,14 +10,15 @@
     if (!isset($_SESSION['Login'])) {
       header('location:Login.html');
     }
-
-    echo "Velkommen!";
     ?>
 
-    <br>
-    <br>
+
+
+
+    <br><br>
     <form action="Logout.php" method="post"> <!-- Har de lyst til at logge ud kan de det -->
       <input type="submit" name="Logout" value="Log Ud">
     </form>
+
   </body>
 </html>

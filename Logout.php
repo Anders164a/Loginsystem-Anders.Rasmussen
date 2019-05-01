@@ -4,7 +4,7 @@
   </head>
 
   <body>
-    <h2>Vi logger dig ud...</h2>
+    <h2>Vent venligst imens vi logger dig ud...</h2>
     <?php
     session_start();
 
