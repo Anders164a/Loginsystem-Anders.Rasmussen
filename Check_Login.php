@@ -23,7 +23,7 @@
       $Mit_Brugernavn=$_POST['Brugernavn']; //'Brugernavn' referere til Login.html's name 'Brugernavn'
       $Mit_Password=$_POST['Password']; //'Password' referere til Login.html's name 'Password'
 
-      $Log_Ind = "SELECT * FROM $tbl_name WHERE username='$Mit_Brugernavn' AND password='$Mit_Password'";
+      $Log_Ind = "SELECT * FROM $tbl_name WHERE brugernavn='$Mit_Brugernavn' AND password='$Mit_Password'";
       $resultat = mysqli_query($conn, $Log_Ind);
 
       $count = mysqli_num_rows($resultat);
