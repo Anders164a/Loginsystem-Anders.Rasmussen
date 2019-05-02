@@ -17,6 +17,7 @@ header {
 .dropdown {
   top: 100%;
   width: 10%;
+	overflow: inherit;
 }
 
 button {
@@ -38,6 +39,7 @@ ul {
   padding: 0;
   height: 38.4px;
   width: inherit;
+	overflow: inherit;
   background: #0ec289;
   transform-origin: top;
   transition: 0.5s;
@@ -58,9 +60,10 @@ ul li a {
   padding: 10px;
   text-align: center;
   text-decoration: none;
-  background: #0eae89;
+	overflow: inherit;
+  background: #0ec289;
   color: #fff;
-  border-bottom: 1px solid rgba(0,0,0,.2);
+  border-bottom: 1px solid rgb(0,0,0);
   transition: 0.5s;
 }
 
@@ -68,11 +71,17 @@ ul li a:hover {
   background: #0ea489;
 }
 
+form {
+	position: fixed;
+	font-size: 20px;
+	bottom: 10%;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  top: 50%;
+  Bottom: 5%;
   color: black;
   text-align: center;
 }

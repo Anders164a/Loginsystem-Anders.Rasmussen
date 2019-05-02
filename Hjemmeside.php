@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript"> // Dette er de to scripts der skal til, for at dropdown knappen virker
       $(document).ready(function() {
         $('button').click(function() {
           $('ul').toggleClass('active')
@@ -23,6 +23,7 @@
       </ul>
     </div>
   </header>
+  <body>
     <?php
     session_start();
 
@@ -32,20 +33,14 @@
     ?>
 
 
-
-
-
     <br><br>
     <form action="Logout.php" method="post"> <!-- Har de lyst til at logge ud kan de det -->
-      <input type="submit" name="Logout" value="Log Ud">
+      <input type="submit" name="Logud" value="Log Ud">
     </form>
-
-<footer>
+  </body>
+  <footer>
   <p>Har du spørgsmål el. lign. Er du velkommen til at kontakte mig!</p>
   <a href="mailto:Anders164a@gmail.com">Send Mail</a>
   <br>
-
-</footer>
-
-  </body>
+  </footer>
 </html>

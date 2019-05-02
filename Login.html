@@ -1,35 +1,30 @@
 <html>
   <head>
     <title>Login</title>
+    <meta charset="utf-8">
   </head>
 
   <body>
-
     <h2>Velkommen, du bedes logge ind!</h2>
     <br>
 
     <form action="Check_Login.php" method="post">
-      Brugernavn:
+      Brugernavn/Email:
       <br>
-      <input type="text" name="Brugernavn"/>
+      <input type="text" name="Brugernavn/Email"/>
       <br><br>
       Password:
       <br>
       <input type="password" name="Password"/>
       <br><br>
-      Email:
-      <br>
-      <input type="text" name="Email"/>
-      <br><br>
       <button type="submit">Login</button>
       <br><br>
     </form>
 
-    <h2>Har du ikke en bruger, kan du oprette en her!</h2>
+    <h3>Har du ikke en bruger, kan du oprette en her!</h3>
 
     <form action="Registrer.php" method="post">
       <button type="submit">Registrer!</button>
     </form>
-    
   </body>
 </html>
