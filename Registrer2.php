@@ -61,8 +61,8 @@
       mysqli_close($conn);
     ?>
 
-    <form action="Login.html" method="post">
-      <button type="Submit">Logind Side</button>
+    <form action="Registrer.php" method="post">
+      <button type="Submit">Tilbage</button>
     </form>
 
   </body>
