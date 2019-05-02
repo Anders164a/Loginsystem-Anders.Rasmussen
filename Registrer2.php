@@ -24,7 +24,7 @@
       $db_E = "SELECT * FROM Brugere WHERE Email='$Ny_Email'";
       $conn_E = mysqli_query($conn, $db_E);
 
-      if (strlen($Ny_Email) >= 7 && strlen($Ny_Email) <= 65){
+      if (strlen($Ny_Email) >= 7 && strlen($Ny_Email) <= 35){
         if (substr_count($Ny_Email, '@') == 1) {
           if (strstr($Ny_Email, ".dk") == ".dk") {
             if (mysqli_num_rows($conn_E) > 0) { // Er der flere der har samme Email, vil den sige "Email er allerede taget!";
