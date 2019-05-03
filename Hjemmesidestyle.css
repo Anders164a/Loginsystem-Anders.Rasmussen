@@ -14,7 +14,7 @@ header {
 	height: 50px;
 }
 
-.Shortcuts {
+.Shortcuts { /*Referere til Hjemmeside.php's div class 'shortcuts'*/
   top: 100%;
   width: 10%;
 	overflow: inherit;

@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Logger ind...</title>
+    <link rel="stylesheet" type="text/css" href="Login_Registrerstyle.css">
   </head>
 
     <body>
@@ -23,12 +24,18 @@
       $Log_Ind = "SELECT * FROM $tbl_name WHERE brugernavn='$Mit_Brugernavn' OR Email='$Mit_Brugernavn' AND password='$Mit_Password'";
       $resultat = mysqli_query($conn, $Log_Ind);
 
-      $count = mysqli_num_rows($resultat);
+      $row = mysqli_fetch_assoc($resultat);
+        $Check_Brugernavn = $row['Brugernavn']; //Den tjekker alle værdier under databasen's kolonne 'Brugernavn'
+        $Check_Password = $row['Password']; //Den tjekker alle værdier under databasen's kolonne 'Password'
+        $Check_Email = $row['Email']; //Den tjekker alle værdier under databasen's kolonne 'Email'
 
-      if ($count == 1) { // Er der én bruger med det Brugernavn/Email & Password, bliver personen sendt videre
-        echo "Vent venligst imens vi gør dig klar!";
-        $_SESSION['Login'] = true;
-        header('location:Hjemmeside.php');
+
+      if (($Mit_Brugernavn === $Check_Brugernavn || $Mit_Brugernavn === $Check_Email) && $Mit_Password === $Check_Password) { // Her sikre vi os, at Brugernavnet eller Emailen, hører til det samme password. Så man ikke kan logge ind med éns brugernavn men en andens password
+        if (mysqli_num_rows($resultat) > 0) { // Er der én bruger med det Brugernavn/Email & Password, bliver personen sendt videre
+          echo "Vent venligst imens vi gør dig klar!";
+          $_SESSION['Login'] = true;
+          header('location:Hjemmeside.php');
+        }
       }
       else { // Er der ingen brugere med det Brugernavn/Email, Password, bliver de ikke sendt videre, og kan prøve igen ved at klikke på knappen, eller gå hend til registrer.
         echo "Forkert Brugernavn, Password eller Email!";
@@ -39,9 +46,14 @@
         echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
         echo "<button type=" . 'submit' . ">Registrer Her!</button>";
         echo "</form>";
-      }
+        }
 
       $conn->close();
       ?>
     </body>
+
+    <footer>
+      <p>Har du spørgsmål el. lign. Er du velkommen til at kontakte mig!</p>
+      <a href="mailto:Anders164a@gmail.com">Send Mail</a>
+    </footer>
 </html>

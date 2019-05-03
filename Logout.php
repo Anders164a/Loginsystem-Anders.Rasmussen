@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Logger Ud</title>
+    <link rel="stylesheet" type="text/css" href="Login_Registrerstyle.css">
   </head>
 
   <body>

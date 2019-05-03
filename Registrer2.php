@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Registrer!</title>
+    <link rel="stylesheet" type="text/css" href="Login_Registrerstyle.css">
   </head>
 
   <body>
@@ -26,7 +27,7 @@
 
       if (strlen($Ny_Email) >= 7 && strlen($Ny_Email) <= 35){
         if (substr_count($Ny_Email, "@") == 1) {
-          if (strstr($Ny_Email, ".dk") == ".dk") {
+          if (strstr($Ny_Email, "@") == "gmail.dk" || strstr($Ny_Email, "@") == "gmail.com" || strstr($Ny_Email, "@") == "gmail.net" || strstr($Ny_Email, "@") == "gmail.org") { //Emailen skal være gmail, og skal slukke på én af de 4 valgmuligheder (Dette kan gøres anerledes, så det er mere effektivt. Dette var dog den mest sikre måde pt.)
             if (mysqli_num_rows($conn_Email) > 0) { // Er der flere der har samme Email .dk, vil den sige "Email er allerede taget!";
               echo "Email er allerede taget!";
               echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
@@ -42,38 +43,22 @@
               echo "</form>";
             }
           }
-          elseif (strstr($Ny_Email, ".com") == ".com") {
-            if (mysqli_num_rows($conn_Email) > 0) { // Er der flere der har samme Email med .com, vil den sige "Email er allerede taget!";
-              echo "Email er allerede taget!";
-              echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
-              echo "<button type=" . 'submit' . ">Tilbage</button>";
-              echo "</form>";
-            }
-            else {
-              $NyBruger = "INSERT INTO Brugere (Brugernavn, Password, Email) VALUES ('$Nyt_Brugernavn', '$Nyt_Password', '$Ny_Email')";
-              $results = mysqli_query($conn, $NyBruger);
-              echo "Din bruger er nu sat op!";
-              echo "<form action=" . 'Login.html' . " method=" . 'post' . ">";
-              echo "<button type=" . 'submit' . ">Log-ind Side</button>";
-              echo "</form>";
-            }
-          }
           else {
-            echo "Email ikke tilladt. Skal slutte på .dk eller .com";
+            echo "Din Email skal være gmail og skal slutte på f.x. én af de her .dk, .com, .net el. .org";
             echo "<form action=" . 'Registrer.html'." method=" . 'post' . ">";
             echo "<button type=" . 'submit' . ">Tilbage</button>";
             echo "</form>";
           }
         }
         else {
-          echo "Email ikke tilladt. Der skal være præcis 1 @";
+          echo "Der skal være præcis 1 @ i din Email";
           echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
           echo "<button type=" . 'submit' . ">Tilbage</button>";
           echo "</form>";
         }
       }
       else {
-        echo "Email ikke tilladt. 7-35 tegn";
+        echo "Din Email skal være på 7-35 tegn";
         echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
         echo "<button type=" . 'submit' . ">Tilbage</button>";
         echo "</form>";
@@ -82,4 +67,9 @@
       mysqli_close($conn);
     ?>
   </body>
+
+  <footer>
+    <p>Har du spørgsmål el. lign. Er du velkommen til at kontakte mig!</p>
+    <a href="mailto:Anders164a@gmail.com">Send Mail</a>
+  </footer>
 </html>
