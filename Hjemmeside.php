@@ -28,7 +28,7 @@
     session_start();
 
     if (!isset($_SESSION['Login'])) {
-      header('location:Login.html');
+      header('location:Startside.html');
     }
     ?>
 

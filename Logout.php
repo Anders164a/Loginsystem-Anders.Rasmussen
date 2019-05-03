@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Logger Ud</title>
-    <link rel="stylesheet" type="text/css" href="Login_Registrerstyle.css">
+    <link rel="stylesheet" type="text/css" href="Startside_Registrerstyle.css">
   </head>
 
   <body>
@@ -11,7 +11,7 @@
 
     if ($_POST['Logud']) { // 'Logout' referere til Hjemmeside.php's logout knap name 'Logud'
       session_destroy();
-      header('location:Login.html');
+      header('location:Startside.html');
     }
     ?>
 </body>

@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Logger ind...</title>
-    <link rel="stylesheet" type="text/css" href="Login_Registrerstyle.css">
+    <link rel="stylesheet" type="text/css" href="Startside_Registrerstyle.css">
   </head>
 
     <body>
@@ -39,7 +39,7 @@
       }
       else { // Er der ingen brugere med det Brugernavn/Email, Password, bliver de ikke sendt videre, og kan prøve igen ved at klikke på knappen, eller gå hend til registrer.
         echo "Forkert Brugernavn, Password eller Email!";
-        echo "<form action=" . 'Login.html' . " method=" . 'post' . ">";
+        echo "<form action=" . 'Startside.html' . " method=" . 'post' . ">";
         echo "<button type=" . 'submit' . ">Prøv Igen!</button>";
         echo "</form>", "<br>", "<br>";
         echo "Har du ikke nogen bruger kan du registrere her!";
@@ -51,9 +51,4 @@
       $conn->close();
       ?>
     </body>
-
-    <footer>
-      <p>Har du spørgsmål el. lign. Er du velkommen til at kontakte mig!</p>
-      <a href="mailto:Anders164a@gmail.com">Send Mail</a>
-    </footer>
 </html>
