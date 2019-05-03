@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <h2>Vent venligst imens vi logger dig ud...</h2> <!-- Skulle det tage noget tid for dem at logge ud, popper denne besked op -->
+    <h2>Vent venligst imens vi logger dig ud...</h2> <!-- Skulle det tage noget tid for dem at logge ud, kan de se denne besked -->
     <?php
       session_start();
 
