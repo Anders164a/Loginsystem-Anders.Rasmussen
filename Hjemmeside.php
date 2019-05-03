@@ -34,11 +34,11 @@
 
 
     <br><br>
+  </body>
+  <footer>
     <form action="Logout.php" method="post"> <!-- Har de lyst til at logge ud kan de det -->
       <input type="submit" name="Logud" value="Log Ud">
     </form>
-  </body>
-  <footer>
   <p>Har du spørgsmål el. lign. Er du velkommen til at kontakte mig!</p>
   <a href="mailto:Anders164a@gmail.com">Send Mail</a>
   <br>
