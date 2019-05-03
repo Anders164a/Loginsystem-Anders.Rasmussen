@@ -11,8 +11,8 @@
         })
       })
     </script>
-
   </head>
+
   <header>
     <div class="shortcuts">
       <button>Shortcuts!</button>
@@ -23,6 +23,7 @@
       </ul>
     </div>
   </header>
+
   <body>
     <?php
     session_start();
@@ -31,10 +32,8 @@
       header('location:Startside.html');
     }
     ?>
-
-
-    <br><br>
   </body>
+
   <footer>
     <form action="Logout.php" method="post"> <!-- Har de lyst til at logge ud kan de det -->
       <input type="submit" name="Logud" value="Log Ud">

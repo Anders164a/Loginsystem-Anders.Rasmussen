@@ -25,11 +25,11 @@
       $db_Email = "SELECT * FROM Brugere WHERE Email='$Ny_Email'";
       $conn_Email = mysqli_query($conn, $db_Email);
 
-      if (strlen($Ny_Email) >= 7 && strlen($Ny_Email) <= 35){
+      if (strlen($Ny_Email) >= 7 && strlen($Ny_Email) <= 35) {
         if (substr_count($Ny_Email, "@") == 1) {
           if (strstr($Ny_Email, ".dk") == ".dk" || strstr($Ny_Email, ".com") == ".com" || strstr($Ny_Email, ".net") == ".net" || strstr($Ny_Email, ".org") == ".org") { //Emailen skal slutte på én af de 4 valgmuligheder
-            if (mysqli_num_rows($conn_Email) > 0) { // Er der flere der har samme Email .dk, vil den sige "Email er allerede taget!";
-              echo "Email er allerede taget!";
+            if (mysqli_num_rows($conn_Email) > 0) { // Er der flere der har samme Email, vil den sige "Email er allerede taget!";
+              echo "Email er allerede taget!", "<br>", "<br>";
               echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
               echo "<button type=" . 'submit' . ">Tilbage</button>";
               echo "</form>";
@@ -44,21 +44,21 @@
             }
           }
           else {
-            echo "Din Email skal slutte på én af de her .dk, .com, .net el. .org";
+            echo "Din Email skal slutte på én af de her .dk, .com, .net eller .org", "<br>", "<br>";
             echo "<form action=" . 'Registrer.html'." method=" . 'post' . ">";
             echo "<button type=" . 'submit' . ">Tilbage</button>";
             echo "</form>";
           }
         }
         else {
-          echo "Der skal være præcis 1 @ i din Email";
+          echo "Der skal være præcis 1 @ i din Email", "<br>", "<br>";
           echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
           echo "<button type=" . 'submit' . ">Tilbage</button>";
           echo "</form>";
         }
       }
       else {
-        echo "Din Email skal være på 7-35 tegn";
+        echo "Din Email skal være på 7-35 tegn", "<br>", "<br>";
         echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
         echo "<button type=" . 'submit' . ">Tilbage</button>";
         echo "</form>";
