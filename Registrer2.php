@@ -51,7 +51,7 @@
           }
         }
         else {
-          echo "Der må kun være 1 @ i din Email", "<br>", "<br>";
+          echo "Der skal være ét @ i din Email", "<br>", "<br>";
           echo "<form action=" . 'Registrer.html' . " method=" . 'post' . ">";
           echo "<button type=" . 'submit' . ">Tilbage</button>";
           echo "</form>";

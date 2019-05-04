@@ -9,7 +9,7 @@
     <?php
       session_start();
 
-      if ($_POST['Logud']) { // 'Logout' referere til Hjemmeside.php's logout knap name 'Logud'
+      if ($_POST['Logud']) { // 'Logud' referere til Hjemmeside.php's logout knap name 'Logud'
         session_destroy();
         header('location:Startside.html');
       }
