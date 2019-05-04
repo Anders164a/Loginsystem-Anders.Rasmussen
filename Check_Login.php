@@ -47,7 +47,7 @@
           echo "</form>";
         }
 
-        $conn->close();
+        mysqli_close($conn);
       ?>
     </body>
 </html>
