@@ -29,14 +29,14 @@
         $Check_Password = $row['Password']; //Den tjekker alle værdier under databasen's kolonne 'Password'
         $Check_Email = $row['Email']; //Den tjekker alle værdier under databasen's kolonne 'Email'
 
-        if (($Mit_Brugernavn === $Check_Brugernavn || $Mit_Brugernavn === $Check_Email) && $Mit_Password === $Check_Password) { // Her sikre vi os, at Brugernavnet eller Emailen, hører til den samme persons password. Så man ikke kan logge ind med en persons brugernavn men en andens password
-          if (mysqli_num_rows($resultat) > 0) { // Er der én bruger med det Brugernavn/Email & Password, bliver personen sendt videre. Man kunne også sige at det kun er Email & Password man kan logge ind med, da der er en risiko for 2 personer har samme Brugernavn & Password.
+        if (($Mit_Brugernavn === $Check_Brugernavn || $Mit_Brugernavn === $Check_Email) && $Mit_Password === $Check_Password) { //Her sikre vi os, at Brugernavnet eller Emailen, hører til den samme persons password. Så man ikke kan logge ind med en persons brugernavn men en andens password
+          if (mysqli_num_rows($resultat) > 0) { //Er der én bruger med det Brugernavn/Email & Password, bliver personen sendt videre. Man kunne også sige at det kun er Email & Password man kan logge ind med, da der er en risiko for 2 personer har samme Brugernavn & Password.
             echo "Vent venligst imens vi gør dig klar!";
             $_SESSION['Login'] = true;
             header('location:Hjemmeside.php');
           }
         }
-        else { // Er der ingen brugere med det Brugernavn/Email & Password, bliver de ikke sendt videre, og kan prøve igen ved at klikke på knappen, eller gå til registrer.
+        else { //Er der ingen brugere med det Brugernavn/Email & Password, bliver de ikke sendt videre, og kan prøve igen ved at klikke på knappen, eller gå til registrer.
           echo "Forkert Brugernavn, Password eller Email!";
           echo "<form action=" . 'Startside.html' . " method=" . 'post' . ">";
           echo "<button type=" . 'submit' . ">Prøv Igen!</button>";
