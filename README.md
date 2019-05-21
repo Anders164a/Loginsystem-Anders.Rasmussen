@@ -3,9 +3,10 @@
 Goddag,  
 håber dette giver et godt indblik i mine faglige kompetencer!
 
-Info:  
-Da jeg var lidt usikker på hvor js og css kunne indsættes henne, lavede jeg en lille  
-hjemmesiden, som viser lidt af det. Håber dette er okay! :)  
+Foreløbig har vi ikke arbejdede så meget igen med programmering i skolen,
+eller programmering af apps for den sags skyld.
+Jeg håber dog stadig på, at der er en plads i jeres virksomhed, hvor jeg vil
+passe ind og kan hjælpe dagligt.
 
 Mvh  
 

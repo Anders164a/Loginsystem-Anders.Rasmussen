@@ -17,7 +17,7 @@
     <div class="shortcuts">
       <button>Shortcuts!</button>
       <ul>
-        <li><a href="https://www.ordbogen.com/da/" target="_blank">Ordbogen</a></li>
+        <li><a href="https://houseofcode.io" target="_blank">House of Code</a></li>
         <li><a href="http://gmail.com" target="_blank">Gmail</a></li>
         <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
       </ul>
