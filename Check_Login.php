@@ -18,8 +18,8 @@
           die("Connection Failed: " . mysqli_connect_error());
         }
 
-        $Mit_Brugernavn=$_POST['Brugernavn/Email']; //'Brugernavn/Email' referere til Login.html's name 'Brugernavn/Email'
-        $Mit_Password=$_POST['Password']; //'Password' referere til Login.html's name 'Password'
+        $Mit_Brugernavn=$_POST['Brugernavn/Email']; //'Brugernavn/Email' referere til Startside.html's name 'Brugernavn/Email'
+        $Mit_Password=$_POST['Password']; //'Password' referere til Startside.html's name 'Password'
 
         $Log_Ind = "SELECT * FROM $tbl_name WHERE brugernavn='$Mit_Brugernavn' OR Email='$Mit_Brugernavn' AND password='$Mit_Password'";
         $resultat = mysqli_query($conn, $Log_Ind);
